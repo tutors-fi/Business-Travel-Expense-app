@@ -1,0 +1,26 @@
+input {
+  margin-top: 5px; /* Adjust the margin as needed */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Make sure input takes the full width of its container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  text-align: left; /* Ensure text inside the input starts from the left */
+}
+
+.text-box-row {
+  display: flex;
+  gap: 16px; /* Adjust the gap as needed */
+  margin-top: 20px;
+}
+
+.text-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Ensure label and input are in column layout */
+}
+
+.text-box label {
+  margin-bottom: 5px; /* Adjust the space between label and input */
+  text-align: left; /* Ensure text inside the label starts from the left */
+}
