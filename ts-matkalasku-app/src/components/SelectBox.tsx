@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 import "./SelectBox.css";
 
-export const OPTIONS = ["Domestic", "Option 2", "Option 3"];
+export const OPTIONS = ["Domestic", "International"];
 
-function SelectBox({ label, className }) {
-  const [selectedOption, setSelectedOption] = useState(OPTIONS[0]);
+interface SelectBoxProps {
+  label: string;
+  className?: string; // Optional className
+}
 
-  const handleSelectChange = (event) => {
+// function SelectBox({ label, className }) {
+//   const [selectedOption, setSelectedOption] = useState(OPTIONS[0]);
+
+const SelectBox: React.FC<SelectBoxProps> = ({ label, className }) => {
+  const [selectedOption, setSelectedOption] = useState<string>(OPTIONS[0]);
+
+  const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedOption(event.target.value);
   };
 
@@ -22,5 +30,5 @@ function SelectBox({ label, className }) {
       </select>
     </div>
   );
-}
+};
 export default SelectBox;
