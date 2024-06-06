@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# MatkaLasku -application (React, TypeScript, Vite)
 
 This is an app that allows the user to track travel expenses.
 
