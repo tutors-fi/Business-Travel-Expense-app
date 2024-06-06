@@ -1,15 +1,7 @@
-import React, { useState } from "react";
-import TextBox from "./components/TextBox.jsx";
-import SelectBox from "./components/SelectBox.jsx";
 import "./App.css";
+import { Departure_Info } from "./components/DepatureInfo.js";
 
-export const OPTIONS = ["Option 1", "Option 2", "Option 3"];
-
-function App() {
-  const [selectedOption, setSelectedOption] = useState(OPTIONS[0]);
-  const handleSelectChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+export function App() {
   return (
     <>
       {/* <div>
@@ -17,18 +9,7 @@ function App() {
         <p>This is the home page of my website.</p>
       </div> */}
       <div>
-        <h1 className="top-left-corner">Add travel information</h1>
-        <p>Trip description</p>
-        <div className="text-box-row">
-          <TextBox label="Description" className="text-box" />
-          <SelectBox
-            label="Type: "
-            options={OPTIONS}
-            className="text-box"
-            value={selectedOption}
-            onChange={handleSelectChange}
-          />
-        </div>
+        <Departure_Info />
       </div>
       {/* <h1 className="text-3xxxxl bolder">Vite + React</h1>
       <div className="card text-3xl font-bold underline">
