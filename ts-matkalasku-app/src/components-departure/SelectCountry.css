@@ -1,0 +1,24 @@
+.select-box-country {
+  width: 300px; /* Change the width to whatever value you prefer */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  appearance: none;
+  margin-top: 10px;
+}
+
+.select-box-country label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.select-box-country select {
+  width: 100%; /* This ensures the select element takes up 100% of the width of its container */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  appearance: none;
+}

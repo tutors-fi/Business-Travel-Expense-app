@@ -1,5 +1,5 @@
 import "./App.css";
-import { Departure_Info } from "./components/DepatureInfo.js";
+import { Departure_Info } from "./components-departure/DepatureInfo.tsx";
 
 export function App() {
   return (

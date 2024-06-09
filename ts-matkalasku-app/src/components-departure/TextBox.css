@@ -24,3 +24,10 @@ input {
   margin-bottom: 5px; /* Adjust the space between label and input */
   text-align: left; /* Ensure text inside the label starts from the left */
 }
+
+.divider {
+  border: none; /* Remove default border */
+  height: 1px; /* Set height */
+  background: #ccc; /* Set color */
+  margin: 20px 0; /* Add margin */
+}
