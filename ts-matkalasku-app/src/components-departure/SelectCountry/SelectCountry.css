@@ -1,15 +1,17 @@
 .select-box-country {
   width: 300px; /* Change the width to whatever value you prefer */
-  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background: white;
   appearance: none;
-  margin-top: 10px;
+  margin-top: 10px; */
 }
 
 .select-box-country label {
-  display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
@@ -19,6 +21,4 @@
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background: white;
-  appearance: none;
 }

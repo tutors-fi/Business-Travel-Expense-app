@@ -5,5 +5,9 @@ select {
   padding-right: 30px; /* Make room for the custom dropdown arrow */
   background-color: white; /* Ensure background color is white */
   color: #333; /* Set text color */
-  width: 200px;
+  width: 150px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
 }

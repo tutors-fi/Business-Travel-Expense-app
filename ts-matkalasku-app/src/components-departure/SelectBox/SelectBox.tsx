@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent } from "react";
-import "./SelectBox.css";
+// import "./SelectBox.css";
+import "../styles.css";
 
 export const OPTIONS = ["Domestic", "International"];
 

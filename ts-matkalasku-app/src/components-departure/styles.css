@@ -1,0 +1,52 @@
+.text-box-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  text-align: left; /* Ensure text inside the input starts from the left */
+}
+
+.text-box,
+.date-picker-container,
+.select-box-country {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.text-box input,
+.date-picker-input,
+.select-box-country select {
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.text-box label,
+.date-picker-container label,
+.select-box-country label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.divider {
+  border: none; /* Remove default border */
+  height: 1px; /* Set height */
+  background: #ccc; /* Set color */
+  margin: 20px 0; /* Add margin */
+}
+
+/* text-box-type */
+
+.text-box-type {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.text-box-type label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}

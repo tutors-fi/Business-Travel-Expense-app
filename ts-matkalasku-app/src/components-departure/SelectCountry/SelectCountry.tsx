@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent } from "react";
-import "./SelectCountry.css";
+// import "./SelectCountry.css";
+import "../styles.css";
 
 interface SelectCountryProps {
   label: string;

@@ -3,7 +3,7 @@ input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 100%; /* Make sure input takes the full width of its container */
+  width: 200px; /* Make sure input takes the full width of its container */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
   text-align: left; /* Ensure text inside the input starts from the left */
 }
@@ -12,6 +12,7 @@ input {
   display: flex;
   gap: 16px; /* Adjust the gap as needed */
   margin-top: 20px;
+  align-items: center; /* Align items vertically in the center */
 }
 
 .text-box {
@@ -30,4 +31,10 @@ input {
   height: 1px; /* Set height */
   background: #ccc; /* Set color */
   margin: 20px 0; /* Add margin */
+}
+
+.text-box-time {
+  display: flex;
+  flex-direction: column; /* Ensure label and input are in column layout */
+  width: 30px;
 }
