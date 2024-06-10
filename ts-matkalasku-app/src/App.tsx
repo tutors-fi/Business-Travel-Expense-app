@@ -6,7 +6,6 @@ import International from './International/International'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
