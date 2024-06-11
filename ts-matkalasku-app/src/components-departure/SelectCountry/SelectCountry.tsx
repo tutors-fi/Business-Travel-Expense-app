@@ -1,10 +1,12 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { ChangeEvent } from "react";
 // import "./SelectCountry.css";
 import "../styles.css";
 
 interface SelectCountryProps {
   label: string;
   className?: string;
+  value: string;
+  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
 }
 
 const COUNTRIES = [
@@ -203,17 +205,16 @@ const COUNTRIES = [
   "Zimbabwe",
 ];
 
-const SelectCountry: React.FC<SelectCountryProps> = ({ label, className }) => {
-  const [selectedCountry, setSelectedCountry] = useState<string>(COUNTRIES[0]);
-
-  const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    setSelectedCountry(event.target.value);
-  };
-
+const SelectCountry: React.FC<SelectCountryProps> = ({
+  label,
+  className,
+  value,
+  onChange,
+}) => {
   return (
     <div className={className}>
       <label>{label}</label>
-      <select value={selectedCountry} onChange={handleSelectChange}>
+      <select value={value} onChange={onChange}>
         {COUNTRIES.map((country, index) => (
           <option key={index} value={country}>
             {country}

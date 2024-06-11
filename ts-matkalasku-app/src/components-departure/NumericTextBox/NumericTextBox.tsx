@@ -1,21 +1,26 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent } from "react";
 import "../styles.css";
 
 interface NumericTextBoxProps {
   label: string;
   className?: string;
+  value: number;
+  onChange: (value: number) => void;
 }
 
 const NumericTextBox: React.FC<NumericTextBoxProps> = ({
   label,
   className,
+  value,
+  onChange,
 }) => {
-  const [value, setValue] = useState("");
-
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
+    const newValue =
+      event.target.value === "" ? NaN : Number(event.target.value);
+    if (!isNaN(newValue) && newValue >= 0) {
+      onChange(newValue);
+    }
   };
-
   return (
     <div className={className}>
       <label>{label}</label>
@@ -23,7 +28,7 @@ const NumericTextBox: React.FC<NumericTextBoxProps> = ({
         type="number"
         min="0"
         step="1"
-        value={value}
+        value={isNaN(value) ? "" : value}
         onChange={handleChange}
       />
     </div>

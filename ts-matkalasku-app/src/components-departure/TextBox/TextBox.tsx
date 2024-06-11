@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent } from "react";
 // import "./TextBox.css";
 import "../styles.css";
 
@@ -6,19 +6,21 @@ interface TextBoxProps {
   label: string;
   className?: string;
   type: string;
+  value: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const TextBox: React.FC<TextBoxProps> = ({ label, className, type }) => {
-  const [value, setValue] = useState("");
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
-  };
-
+const TextBox: React.FC<TextBoxProps> = ({
+  label,
+  className,
+  type,
+  value,
+  onChange,
+}) => {
   return (
     <div className={className}>
       <label>{label}</label>
-      <input type={type} value={value} onChange={handleChange} />
+      <input type={type} value={value} onChange={onChange} />
     </div>
   );
 };
