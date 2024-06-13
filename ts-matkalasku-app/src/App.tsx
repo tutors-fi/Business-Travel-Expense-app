@@ -1,7 +1,10 @@
 import "./App.css";
+import TripDetails from "./TripDetails";
 
 function App() {
-  return <></>;
+  return <>
+  <TripDetails />
+  </>;
 }
 
 export default App;
