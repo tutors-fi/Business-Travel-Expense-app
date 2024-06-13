@@ -3,7 +3,7 @@ import TextBox from "./TextBox/TextBox.tsx";
 // import SelectBox from "./SelectBox/SelectBox.tsx";
 import CustomDatePicker from "./DatePicker/DatePicker.tsx";
 import SelectCountry from "./SelectCountry/SelectCountry.tsx";
-import NumericTextBox from "./NumericTextBox/NumericTextBox.tsx";
+import NumericTextBoxCount from "./NumericTextBoxCount/NumericTextBoxCount.tsx";
 import Button from "./Button/Button.tsx";
 
 export const Departure_Info = () => {
@@ -79,7 +79,19 @@ export const Departure_Info = () => {
       </div>
 
       <hr className="divider" />
-      <p>1 additional stop</p>
+      <div className="text-box-row">
+        <div>
+          <p>1 additional stop</p>
+          <p>Malaga 13/5/24</p>
+        </div>
+        <div>
+          <p>Edit stops</p>
+        </div>
+        <div>
+          <p>+ Add stop</p>
+        </div>
+      </div>
+
       <hr className="divider" />
 
       {/* Row 3 */}
@@ -105,6 +117,7 @@ export const Departure_Info = () => {
         />
       </div>
       {/* Row 4 */}
+      <hr className="divider" />
       <p>Travel method</p>
       <div className="text-box-row">
         {/* <SelectBox
@@ -113,19 +126,22 @@ export const Departure_Info = () => {
           value={tripType}
           onChange={(e) => setTripType(e.target.value)}
         /> */}
-        <NumericTextBox
+        <NumericTextBoxCount
           label="Person count:"
-          className="text-box"
+          className="numeric-textbox-count"
           value={isNaN(personCount) ? 0 : personCount}
           onChange={(newValue) => setPersonCount(newValue)}
+          showButtons={true}
         />
-        <NumericTextBox
+        <NumericTextBoxCount
           label="Kilometers:"
-          className="text-box"
+          className="numeric-textbox-count"
           value={isNaN(kilometers) ? 0 : kilometers}
           onChange={(newValue) => setKilometers(newValue)}
+          showButtons={false}
         />
       </div>
+      <hr className="divider" />
       <div>
         <Button
           label="Calculate"
