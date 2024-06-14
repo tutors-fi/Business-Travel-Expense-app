@@ -143,7 +143,7 @@ const TripDetails: React.FC = () => {
               onClick={handleAddStop}
               className="w-32 p-2 bg-blue-500 text-white rounded"
             >
-              Add Stop
+              Add Stops
             </button>
           </div>
 
