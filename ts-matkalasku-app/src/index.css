@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.top-left-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 16px; /* Adjust the margin as needed */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}

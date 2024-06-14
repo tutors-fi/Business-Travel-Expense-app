@@ -1,0 +1,13 @@
+select {
+  appearance: none; /* Remove default dropdown arrow */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" fill="gray" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14l-4.796-4.796a.5.5 0 0 1 .707-.707l4.096 4.096 4.096-4.096a.5.5 0 1 1 .707.707l-4.796 4.796a.5.5 0 0 1-.707 0z"/></svg>')
+    no-repeat right 10px center;
+  padding-right: 30px; /* Make room for the custom dropdown arrow */
+  background-color: white; /* Ensure background color is white */
+  color: #333; /* Set text color */
+  width: 150px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+}
